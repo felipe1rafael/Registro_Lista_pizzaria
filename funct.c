@@ -8,7 +8,7 @@ int main (){
     char lista[1000][5];
 
     do{
-        printf("[1] Novo pedido\n[2] Atender Pedido\n[3] Ver filan[4]Encerrar progama\n");
+        printf("[1] Novo pedido\n[2] Atender Pedido\n[3] Ver fila\n[4]Encerrar progama\n");
         scanf("%d",&atendimento);
         if(atendimento == 1){
 
