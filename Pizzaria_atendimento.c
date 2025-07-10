@@ -5,7 +5,7 @@ int main (){
     int  atendimento;
     int i =0;
     int final =0;
-
+    struct Lista{int pedido;char cliente[30];char sabor[40];char tamanho[7];int atendido };
 
     do{
         printf("[1] Novo pedido\n[2] Atender Pedido\n[3] Ver fila\n[4]Encerrar progama\n");
