@@ -5,7 +5,7 @@ int main (){
     int  atendimento;
     int i =0;
     int final =0;
-    char lista[1000][5];
+
 
     do{
         printf("[1] Novo pedido\n[2] Atender Pedido\n[3] Ver fila\n[4]Encerrar progama\n");
