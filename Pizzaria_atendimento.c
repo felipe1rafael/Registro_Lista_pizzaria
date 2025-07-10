@@ -5,6 +5,8 @@ int main (){
     int  atendimento;
     int i =0;
     int final =0;
+    char lista[1000][5];
+
     do{
         printf("[1] Novo pedido\n[2] Atender Pedido\n[3] Ver fila\n[4]Encerrar progama\n");
         scanf("%d",&atendimento);
@@ -15,9 +17,7 @@ int main (){
 
         }
          else if(atendimento==3){
-            for(int j=0;j<=i &&lista[j][5]== 0;j++){
 
-            }
         }
          else if(atendimento==4){
             printf("\nProgama encerrado");
@@ -28,15 +28,14 @@ int main (){
     }while (atendimento!= 4);
     return 0;
 }
-char adicionarNome(char nome[50]){
+void adicionarNome(char nome[50]){
 printf("Digite o nome:");
 gets(nome);
-return nome;
+
 }
-char adicionarsabor(char Sabor[30]){
+void adicionarsabor(char Sabor[30]){
 printf("\nDigite o sabor:");
 gets(Sabor);
-return Sabor;
 }
 char SelecionarTamanho(int Ntamanho){
 char Tamanho[7];
