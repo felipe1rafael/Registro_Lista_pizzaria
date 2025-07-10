@@ -1,12 +1,18 @@
 #include <stdio.h>
 #include <string.h>
+struct Lista{
+    int pedido;
+    char cliente[30];
+    char sabor[40];
+    char tamanho[10];
+    int atendido;
+};
+struct Lista Lista[200] ;
 
 int main (){
     int  atendimento;
     int i =0;
     int final =0;
-    struct Lista{int pedido;char cliente[30];char sabor[40];char tamanho[7];int atendido };
-
     do{
         printf("[1] Novo pedido\n[2] Atender Pedido\n[3] Ver fila\n[4]Encerrar progama\n");
         scanf("%d",&atendimento);
@@ -38,42 +44,26 @@ printf("\nDigite o sabor:");
 fgets(Sabor,sizeof(Sabor),stdin);
 fflush(stdin);
 }
-char SelecionarTamanho(int Ntamanho){
-char Tamanho[7];
-Tamanho[6] ='\0';
-printf("para o tamanho digite:\n[1]Pequena\n[2]Media\n[3]Grande\n");
-scanf("%d",&Ntamanho);
-for(int i=1;i>0;i++){
-if(Ntamanho==1){
-    Tamanho [0] ='P';
-    Tamanho [1] ='e';
-    Tamanho [2] ='q';
-    Tamanho [3] ='u';
-    Tamanho [4] ='e';
-    Tamanho [5] ='n';
-    Tamanho [6] ='a';
-    break;
-}
-else if(Ntamanho==2){
-    Tamanho [0] ='M';
-    Tamanho [1] ='e';
-    Tamanho [2] ='d';
-    Tamanho [3] ='i';
-    Tamanho [4] ='a';
-    break;
-}
-else if(Ntamanho==3){
-    Tamanho [0] ='G';
-    Tamanho [1] ='r';
-    Tamanho [2] ='a';
-    Tamanho [3] ='n';
-    Tamanho [4] ='d';
-    Tamanho [5] ='e';
-    break;
-}
-else{
+void selecionarTamanho(char tamanho[10]) {
+    int op;
+    printf("Para o tamanho digite:\n[1] Pequena\n[2] Media\n[3] Grande\n");
+    scanf("%d", &op);
 
+    switch (op) {
+        case 1:
+            strcpy(tamanho, "Pequena");
+            break;
+        case 2:
+            strcpy(tamanho, "Media");
+            break;
+        case 3:
+            strcpy(tamanho, "Grande");
+            break;
+        default:
+            strcpy(tamanho, "Invalido");
+            break;
+    }
 }
-}
-}
+
+
 
