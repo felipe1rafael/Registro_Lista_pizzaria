@@ -30,12 +30,13 @@ int main (){
 }
 void adicionarNome(char nome[50]){
 printf("Digite o nome:");
-gets(nome);
-
+fgets(nome,sizeof(nome),stdin);
+fflush(stdin);
 }
 void adicionarsabor(char Sabor[30]){
 printf("\nDigite o sabor:");
-gets(Sabor);
+fgets(Sabor,sizeof(Sabor),stdin);
+fflush(stdin);
 }
 char SelecionarTamanho(int Ntamanho){
 char Tamanho[7];
