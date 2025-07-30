@@ -16,40 +16,41 @@ void adicionarNome(char nome[30]) {
 	printf("Digite o nome: ");
     getchar();
     fgets(nome, 30, stdin);
-    nome[strcspn(nome, "\n")] = '\0';
 }
 
 void adicionarSabor(char sabor[40]) {
-    int op;
+    int op_sabor;
+    do{
     printf("Escolha o sabor da pizza:\n");
     printf("[1] Calabresa\n");
     printf("[2] Mussarela\n");
     printf("[3] Frango\n");
     printf("[4] Portuguesa\n");
     printf("[5] Carne seca\n");
-    scanf("%d", &op);
+    scanf("%d", &op_sabor);
 
-    switch (op) {
+    switch (op_sabor) {
         case 1: strcpy(sabor, "Calabresa"); break;
         case 2: strcpy(sabor, "Mussarela"); break;
         case 3: strcpy(sabor, "Frango"); break;
         case 4: strcpy(sabor, "Portuguesa"); break;
         case 5: strcpy(sabor, "Carne seca"); break;
-        default: strcpy(sabor, "Invalido"); break;
-    }
+        default:system("cls"); printf("\nSabor invalido\n");break;
+    }}while(op_sabor>=6||op_sabor<=0);
 }
 
 void selecionarTamanho(char tamanho[10]) {
-    int op;
-    printf("Selecione o tamanho:\n[1] Pequena\n[2] Media\n[3] Grande\n");
-    scanf("%d", &op);
-
-    switch (op) {
+    int op_tamanho;
+    do{
+        printf("Selecione o tamanho:\n[1] Pequena\n[2] Media\n[3] Grande\n");
+        scanf("%d", &op_tamanho);
+        switch (op_tamanho) {
         case 1: strcpy(tamanho, "Pequena"); break;
         case 2: strcpy(tamanho, "Media"); break;
         case 3: strcpy(tamanho, "Grande"); break;
-        default: strcpy(tamanho, "Invalido"); break;
+        default:system("cls"); printf("\nTamanho invalido\n");break;
     }
+    }while(op_tamanho>=4||op_tamanho<=0);
 }
 
 int main() {
