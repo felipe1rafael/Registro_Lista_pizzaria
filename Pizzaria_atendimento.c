@@ -56,7 +56,6 @@ void selecionarTamanho(char tamanho[10]) {
 int main() {
     int atendimento;
     int i = 0;
-    int final = 0;
     int l;
     int j;
 
